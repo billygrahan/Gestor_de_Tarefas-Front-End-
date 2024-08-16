@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Coloca os elementos em uma coluna */
+    align-items: center;
+    /* Centraliza os elementos dentro da coluna */
+    padding-top: 70px;
+    /* Espaço para a barra superior (50px + 20px de margem extra) */
+    padding-bottom: 60px;
+    /* Espaço para a barra inferior */
+    width: 100%;
+    max-width: 500px;
+    /* Define uma largura máxima */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+}
+
+.cadastro{
+    display: none;
+    flex-direction: column;
+    /* Coloca os elementos em uma coluna */
+    align-items: center;
+    /* Centraliza os elementos dentro da coluna */
+    background-color: white;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Cantos arredondados, opcional */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar */
+    width: 100%;
+    max-width: 500px;
+    /* Define uma largura máxima */
+}
+
+.tarefasContainer {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    /* Espaçamento entre os itens */
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------- container cadastri interno -----------------------*/
+/* Estilos gerais para o título e descrição */
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #030303;
+    margin-bottom: 5px;
+}
+
+/* Estilizando o campo de texto do título */
+#Titulo {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Estilizando o campo de descrição (textarea) */
+#Descricao {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+    margin-bottom: 20px;
+}
+
+.tarefa {
+    position: relative;
+    /* Para permitir posicionamento absoluto do botão */
+    width: 100%;
+    background-color: #8edb87;
+    /* Cor de fundo para as tarefas */
+    border: 1px solid #000000;
+    /* Borda leve */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin-bottom: 10px;
+    /* Espaçamento entre as tarefas */
+    border-radius: 5px;
+    /* Cantos arredondados */
+}
+
+/* Estilo para o título da tarefa */
+.tarefa p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+/* Estilo para a descrição da tarefa */
+.tarefa pre {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+    white-space: pre-wrap;
+    /* Mantém a formatação e quebra de linha */
+    background-color: #000000;
+    padding: 20px;
+    border-radius: px;
+}
+
+.Cadastrar {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #313746;
+    /* Cor de fundo escura */
+    color: white;
+    /* Cor do texto branca */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 5px;
+    /* Adiciona bordas arredondadas */
+    cursor: pointer;
+    /* Altera o cursor para o ícone de mão */
+    transition: background-color 0.3s ease;
+    /* Transição suave para a mudança de cor */
+}
+
+
+/* Efeito ao passar o mouse */
+.Cadastrar:hover {
+    background-color: #1d85ca;
+    /* Cor de fundo verde mais clara ao passar o mouse */
+}
+
+/* Opcional: Efeito de foco ao clicar */
+.Cadastrar:focus {
+    outline: none;
+    /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma leve sombra para destaque */
+}
+
+/* ----------------------------------- navbar -----------------------*/
+
+.navbar-top,
+.navbar-bottom {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os links horizontalmente */
+    background-color: #333;
+    /* Cor de fundo */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    /* Garante que as barras fiquem acima de outros elementos */
+}
+
+.navbar-top {
+    top: 0;
+    /* Posiciona no topo */
+}
+
+.navbar-bottom {
+    bottom: 0;
+    /* Posiciona no fundo */
+}
+
+.navbar-top a,
+.navbar-bottom a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar-top a:hover,
+.navbar-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------------- nova tarefa -----------------------*/
+.Novo {
+    padding: 3px 13px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    -webkit-box-shadow: transparent;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Novo:hover{
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    -webkit-box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+        0 0 100px #008cff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+        0 0 100px #008cff;
+}
+
+#Visualizar {
+    margin-right: 00px;
+    /* Ajuste o valor conforme necessário */
+}
+
+#novo {
+    margin-left: 10px;
+    /* Ajuste o valor conforme necessário */
+}
+
+/* Estilo para o botão de deletar */
+.botaoDeletar {
+    position: absolute;
+    top: 5px;
+    /* Ajuste conforme necessário */
+    right: 5px;
+    /* Ajuste conforme necessário */
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+}
+
+/* Estilo ao passar o mouse sobre o botão */
+.botaoDeletar:hover {
+    background-color: #ff0000;
+}

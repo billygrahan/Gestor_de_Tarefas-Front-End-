@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar-top">
+        <!-- Links ou itens de navegação -->
+        <button id="Visualizar" class="Novo">Tarefas</button>
+        <button id="novo" class="Novo">Nova Tarefa</button>
+    </nav>
+
+    <div class="container">
+
+        <form class="cadastro">
+            <label for="short-text">Título:</label><br>
+            <input type="text" id="Titulo" name="short-text" size="40"><br>
+        
+            <label for="long-text">Descrição:</label><br>
+            <textarea id="Descricao" name="long-text" rows="5" cols="10" ></textarea><br><br>
+        
+            <input type="submit" value="Cadastrar" class="Cadastrar"><br>
+        </form>
+
+        <br>
+
+        <div id="tarefasContainer" class="tarefasContainer">
+            
+            <!--<div class="tarefas"></div>-->
+        </div>
+        
+    </div>
+
+    <nav class="navbar-bottom">
+        <a href="https://jvictor011.github.io/Night-Fortuna/">Patrocinio @Night-Fortuna</a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
